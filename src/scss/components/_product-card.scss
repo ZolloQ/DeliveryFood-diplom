@@ -15,16 +15,16 @@
   background: url('../img/svg/product-card.svg') no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; // Распределение контента карточки
+  justify-content: space-between;
 
   &__content {
-    flex-grow: 1; // Позволяет контенту занять все доступное пространство
+    flex-grow: 1;
   }
 
   &__title {
     font-size: 25px;
     font-weight: 500;
-    margin: 25px 45px 0; // Объединяем верхний отступ с левым
+    margin: 25px 45px 0;
   }
 
   &__weight {
@@ -33,31 +33,31 @@
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 3px;
     display: inline-block;
-    margin: 10px 0 0 50px; // Позиционирование ниже заголовка
+    margin: 10px 0 0 50px;
   }
 
   &__description {
     font-size: 15px;
     font-weight: 500;
     opacity: 0.8;
-    margin: 10px 45px; // Стандартный отступ с двух сторон
+    margin: 10px 45px;
   }
 
   &__pricing-and-cart {
     display: flex;
-    justify-content: space-between; // Распределение элементов в строке
-    align-items: center; // Выравнивание элементов по центру по вертикали
-    margin: 0 45px 20px; // Отступ со всех сторон кроме верха
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 45px 20px;
   }
 
   &__price {
     font-size: 23px;
     font-weight: 800;
-    margin-right: 18px; // Установка отступа справа 18px
+    margin-right: 18px;
   }
 
   &__cart-btn {
-    background-color: #fdc300;
+    background-color: var(--buy-color);
     border: none;
     cursor: pointer;
     width: 42px;
@@ -66,10 +66,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    transition: background-color 0.3s ease, fill 0.3s ease;
     img {
       width: auto;
       height: 24px;
+    }
+    &:hover {
+      background-color: var(--click-color);
+    }
+    &:active {
+      background-color: var(--dark-color);
+      svg path{
+        fill: var(--buy-color);
+      }
     }
   }
 }
