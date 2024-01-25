@@ -1,0 +1,77 @@
+/* _hero.scss */
+.hero {
+  padding-top: 126px;
+  min-height: 1060px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden; // Предотвращение выхода контента за пределы
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1650px;
+    position: relative;
+    z-index: 0; // Убедитесь, что контент выше .hero__img
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 27%;
+    z-index: 0;
+
+  }
+  &__title {
+    margin: 0;
+    padding-top: 96px;
+    padding-right: 70px;
+    color: var(--light-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+
+  &__points {
+    align-self: flex-start;
+    margin-top: 26px;
+    margin-left: -4%; // Если элемент выходит за пределы, рассмотрите возможность изменения этого значения
+  }
+
+  &__phone {
+    margin-top: 37px;
+    color: var(--light-color);
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  &__mail {
+    margin-top: 7px;
+    color: var(--light-color);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration-line: underline;
+  }
+  &__many-points {
+    position: absolute;
+    right: 3%; // Прижимаем элемент к правому краю
+    top: 140%; // Расположим точки на середине по вертикали
+    transform: translate(50%, -50%); // Сдвигаем вправо за пределы контейнера
+    z-index: 1; // Убедитесь, что точки не перекрывают другие важные элементы
+  }
+}
+
+/* Добавляем стили для карточки продукта, которая будет находится внутри .hero__img */
+.product-card {
+  // Ваши стили для карточки продукта...
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 10; // Убедитесь, что карточка продукта будет поверх изображения
+}

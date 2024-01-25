@@ -1,0 +1,20 @@
+.popular {
+  &__title {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 230px;
+    margin-bottom: 35px;
+    text-align: left;
+    color: var(--light-color);
+    font-size: 80px;
+    font-weight: 500;
+    width: 530px;
+  }
+}
+
+.many-cards {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr)); // 6 равных колонок
+  grid-gap: 25px; // Отступы между карточками
+}
+

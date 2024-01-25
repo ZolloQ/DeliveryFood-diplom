@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 126px;
+  background-color: black;
+  z-index: 1000;
+  transition: min-height 0.3s, background-color 0.3s, padding-top 0.3s;
+  padding-top: 52px; // Добавлено начальное значение padding-top
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Добавьте стили, чтобы уменьшить размер логотипа, меню и других элементов в шапке, чтобы они вмещались в 70px высоты */

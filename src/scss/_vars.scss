@@ -1,0 +1,15 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Monsterrat", sans-serif;
+  --content-width: 1600px;
+  --container-offset: 50px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --buy-color: #FBD13E;
+  --dark-color: #000000;
+  --click-color: #DBB325;
+}

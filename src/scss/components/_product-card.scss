@@ -1,0 +1,75 @@
+/* _product-card.scss */
+.product-card {
+  color: #ffffff;
+  padding: 20px;
+  width: 355px;
+  height: 358px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 125%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: url('../img/svg/product-card.svg') no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // Распределение контента карточки
+
+  &__content {
+    flex-grow: 1; // Позволяет контенту занять все доступное пространство
+  }
+
+  &__title {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 25px 45px 0; // Объединяем верхний отступ с левым
+  }
+
+  &__weight {
+    font-size: 13px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    display: inline-block;
+    margin: 10px 0 0 50px; // Позиционирование ниже заголовка
+  }
+
+  &__description {
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.8;
+    margin: 10px 45px; // Стандартный отступ с двух сторон
+  }
+
+  &__pricing-and-cart {
+    display: flex;
+    justify-content: space-between; // Распределение элементов в строке
+    align-items: center; // Выравнивание элементов по центру по вертикали
+    margin: 0 45px 20px; // Отступ со всех сторон кроме верха
+  }
+
+  &__price {
+    font-size: 23px;
+    font-weight: 800;
+    margin-right: 18px; // Установка отступа справа 18px
+  }
+
+  &__cart-btn {
+    background-color: #fdc300;
+    border: none;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    margin-right: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: auto;
+      height: 24px;
+    }
+  }
+}
